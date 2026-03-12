@@ -3,6 +3,8 @@ import { useState } from "react";
 import ProjectCard from "../../../../components/ProjectCard/ProjectCard";
 import Mediquese from "../../../../assets/images/mediquese.png";
 import MovieBuddy from "../../../../assets/images/moviebuddy.png";
+import ControleFinanceiro from "../../../../assets/images/controle_financeiro.png";
+
 
 const Projetos = () => {
     const [openCard, setOpenCard] = useState<number | null>(null);
@@ -19,7 +21,7 @@ const Projetos = () => {
     }));
 
     return (
-        <StyledProjetos id = "projetos">
+        <StyledProjetos id="projetos">
             <Container maxWidth="lg">
                 <Grid container spacing={4}>
 
@@ -68,6 +70,27 @@ const Projetos = () => {
 
                             O projeto também utiliza python-dotenv para gerenciamento seguro de variáveis de ambiente, Requests para consumo de APIs externas e CORS Middleware para permitir comunicação entre diferentes origens."
                             image={MovieBuddy}
+                            video="https://www.youtube.com/embed/G_tq12WisX8"
+                            openCard={openCard}
+                            toggleCard={toggleCard}
+                        />
+                    </Grid>
+
+                    <Grid size={{ xs: 12 }}>
+                        <ProjectCard
+                            id={3}
+                            title="Controle Financeiro"
+                            shortDescription="Sistema SaaS de controle financeiro desenvolvido que permite o gerenciamento de receitas, despesas e metas financeiras por meio de dashboard interativo, autenticação de usuários e API REST com Sequelize para persistência de dados."
+                            description="Sistema web de controle financeiro desenvolvido no modelo SaaS (Software as a Service), com o objetivo de permitir que usuários registrem, organizem e visualizem suas receitas, despesas e metas financeiras por meio de um painel interativo.
+
+                            A arquitetura do projeto foi estruturada em duas camadas principais: front-end e back-end. O front-end foi desenvolvido utilizando React com TypeScript e Vite, responsável pela construção da interface do usuário, gerenciamento de estados e comunicação com a API por meio de requisições HTTP. A interface apresenta dashboards com gráficos e indicadores financeiros, permitindo visualizar saldo, evolução de gastos e progresso de metas financeiras de forma dinâmica.
+
+                            O back-end foi implementado em Node.js utilizando Express, responsável pelo gerenciamento das regras de negócio, autenticação de usuários e exposição de endpoints REST para consumo pelo front-end. A autenticação é baseada em tokens (JWT), garantindo controle de acesso às rotas protegidas da aplicação.
+                            
+                            A camada de persistência utiliza Sequelize como ORM para interação com o banco de dados relacional, facilitando a modelagem de entidades como usuários, transações financeiras, categorias e metas. Essa estrutura permite registrar receitas e despesas, agrupar informações por períodos (como anos e meses) e gerar dados consolidados para exibição nos dashboards.
+
+                            O sistema também inclui funcionalidades como cadastro e login de usuários, proteção de rotas para impedir acesso não autenticado, gerenciamento de transações financeiras e visualização analítica de dados por meio de gráficos e indicadores. O projeto foi estruturado seguindo princípios de separação de responsabilidades, organização modular do código e comunicação entre cliente e servidor via API REST."
+                            image={ControleFinanceiro}
                             video="https://www.youtube.com/embed/G_tq12WisX8"
                             openCard={openCard}
                             toggleCard={toggleCard}

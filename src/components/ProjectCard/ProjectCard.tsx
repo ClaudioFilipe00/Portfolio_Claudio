@@ -62,7 +62,6 @@ const ProjectCard = ({
           >
             {shortDescription}
           </Typography>
-
         </Box>
 
         <IconButton
@@ -79,51 +78,62 @@ const ProjectCard = ({
 
       {/* EXPANSÃO */}
       <Collapse in={isOpen} timeout="auto" unmountOnExit>
-        <Box mt={4}>
+        <Box
+          mt={4}
+          sx={{
+            animation: "fadeInUp 0.6s ease",
+          }}
+        >
+          {/* IMAGEM + TEXTO */}
+          <Box sx={{ width: "100%" }}>
 
-          {/* IMAGEM + DESCRIÇÃO lado a lado */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              gap: 4,
-              alignItems: "flex-start",
-            }}
-          >
-            {/* IMAGEM FIXA */}
+            {/* CONTAINER FIXO DA IMAGEM */}
             <Box
-              component="img"
-              src={image}
-              alt={title}
               sx={{
-                width: { xs: "100%", md: "40%" },
-                height: "auto",
-                maxHeight: 300,
-                objectFit: "contain",
-                borderRadius: 3,
-                backgroundColor: "#111", // opcional: fundo escuro elegante
+                float: { xs: "none", md: "left" },
+                width: { xs: "100%", md: 280 },
+                mr: { md: 3 },
+                mb: 2,
               }}
-            />
+            >
+              <Box
+                component="img"
+                src={image}
+                alt={title}
+                sx={{
+                  width: "100%",
+                  borderRadius: 3,
+                  objectFit: "contain",
+                  transition: "all 0.4s ease",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.6)",
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                    boxShadow: "0 0 25px rgba(212,175,55,0.45)",
+                  },
+                }}
+              />
+            </Box>
 
-
-            {/* DESCRIÇÃO */}
+            {/* TEXTO */}
             <Typography
               variant="body1"
               sx={{
-                width: { xs: "100%", md: "60%" },
                 color: "rgba(255,255,255,0.9)",
                 fontSize: "1.05rem",
                 lineHeight: 1.8,
                 fontWeight: 300,
                 letterSpacing: "0.4px",
+                textAlign: "justify",
               }}
             >
               {description}
             </Typography>
 
+            {/* limpa float */}
+            <Box sx={{ clear: "both" }} />
           </Box>
 
-          {/* VIDEO GRANDE ABAIXO */}
+          {/* VIDEO */}
           <Box
             sx={{
               mt: 4,
@@ -132,6 +142,7 @@ const ProjectCard = ({
               aspectRatio: "16 / 9",
               borderRadius: 3,
               overflow: "hidden",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.6)",
             }}
           >
             <Box
