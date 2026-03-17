@@ -8,6 +8,8 @@ interface ProjectCardProps {
   description: string;
   image: string;
   video: string;
+  projectLink?: string;
+  githubLink?: string;
   openCard: number | null;
   toggleCard: (id: number) => void;
 }
@@ -19,6 +21,8 @@ const ProjectCard = ({
   description,
   image,
   video,
+  projectLink,
+  githubLink,
   openCard,
   toggleCard,
 }: ProjectCardProps) => {
@@ -42,11 +46,7 @@ const ProjectCard = ({
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Box>
-          <Typography
-            variant="h5"
-            fontWeight={700}
-            color="primary.contrastText"
-          >
+          <Typography variant="h5" fontWeight={700} color="primary.contrastText">
             {title}
           </Typography>
 
@@ -86,8 +86,6 @@ const ProjectCard = ({
         >
           {/* IMAGEM + TEXTO */}
           <Box sx={{ width: "100%" }}>
-
-            {/* CONTAINER FIXO DA IMAGEM */}
             <Box
               sx={{
                 float: { xs: "none", md: "left" },
@@ -114,7 +112,6 @@ const ProjectCard = ({
               />
             </Box>
 
-            {/* TEXTO */}
             <Typography
               variant="body1"
               sx={{
@@ -129,8 +126,56 @@ const ProjectCard = ({
               {description}
             </Typography>
 
-            {/* limpa float */}
             <Box sx={{ clear: "both" }} />
+          </Box>
+
+          {/* LINK DO PROJETO */}
+          <Box
+            mt={3}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1,
+              flexWrap: "wrap"
+            }}
+          >
+            {projectLink && (
+              <a
+                href={projectLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#d4af37",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  fontSize: "1rem",
+                }}
+              >
+                Visitar projeto
+              </a>
+            )}
+
+            {(projectLink && githubLink) && (
+              <Typography sx={{ color: "#d4af37" }}>
+                |
+              </Typography>
+            )}
+
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#d4af37",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  fontSize: "1rem",
+                }}
+              >
+                Repositório GitHub
+              </a>
+            )}
           </Box>
 
           {/* VIDEO */}

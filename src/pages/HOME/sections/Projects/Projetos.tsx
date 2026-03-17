@@ -47,7 +47,7 @@ const Projetos = () => {
 
                             O sistema utiliza PostgreSQL como banco de dados relacional, com Sequelize como ORM para o mapeamento entre objetos da aplicação e tabelas do banco de dados."
                             image={Mediquese}
-                            video="https://www.youtube.com/embed/G_tq12WisX8"
+                            githubLink="https://github.com/ClaudioFilipe00/Medique-SE"
                             openCard={openCard}
                             toggleCard={toggleCard}
                         />
@@ -68,35 +68,33 @@ const Projetos = () => {
 
                             A camada de recomendação utiliza regras e heurísticas para filtrar filmes por gênero e idioma, ordenando por nota e popularidade. Para otimização de desempenho, o sistema mantém controle de chamadas à API da The Movie Database (TMDb), respeitando os limites da versão gratuita.
 
-                            O projeto também utiliza python-dotenv para gerenciamento seguro de variáveis de ambiente, Requests para consumo de APIs externas e CORS Middleware para permitir comunicação entre diferentes origens."
+                            O projeto também utiliza python-dotenv para gerenciamento seguro de variáveis de ambiente, Requests para consumo de APIs externas e CORS Middleware para permitir comunicação entre diferentes origens. Antes de executar o sistema, leia a documentação sobre a utilização no Readme no repositório do Github."
                             image={MovieBuddy}
-                            video="https://www.youtube.com/embed/G_tq12WisX8"
+                            projectLink="https://drive.usercontent.google.com/download?id=1_TFIG1Db5S1h4RInpe0icsw9-Ul1-GRr&export=download&authuser=0"
+                            githubLink="https://github.com/ClaudioFilipe00/Chatbot-MovieBuddy"
                             openCard={openCard}
                             toggleCard={toggleCard}
                         />
                     </Grid>
 
-                    <Grid size={{ xs: 12 }}>
-                        <ProjectCard
-                            id={3}
-                            title="Controle Financeiro"
-                            shortDescription="Sistema SaaS de controle financeiro desenvolvido que permite o gerenciamento de receitas, despesas e metas financeiras por meio de dashboard interativo, autenticação de usuários e API REST com Sequelize para persistência de dados."
-                            description="Sistema web de controle financeiro desenvolvido no modelo SaaS (Software as a Service), com o objetivo de permitir que usuários registrem, organizem e visualizem suas receitas, despesas e metas financeiras por meio de um painel interativo.
+                    <ProjectCard
+                        id={3}
+                        title="Controle Financeiro"
+                        shortDescription="Sistema SaaS de controle financeiro desenvolvido que permite o gerenciamento de receitas, despesas e metas financeiras por meio de dashboard interativo."
+                        description="Sistema web de controle financeiro desenvolvido no modelo SaaS (Software as a Service).
 
-                            A arquitetura do projeto foi estruturada em duas camadas principais: front-end e back-end. O front-end foi desenvolvido utilizando React com TypeScript e Vite, responsável pela construção da interface do usuário, gerenciamento de estados e comunicação com a API por meio de requisições HTTP. A interface apresenta dashboards com gráficos e indicadores financeiros, permitindo visualizar saldo, evolução de gastos e progresso de metas financeiras de forma dinâmica.
+                                    O front-end foi desenvolvido utilizando React com TypeScript e Vite, responsável pela construção da interface do usuário e comunicação com a API.
 
-                            O back-end foi implementado em Node.js utilizando Express, responsável pelo gerenciamento das regras de negócio, autenticação de usuários e exposição de endpoints REST para consumo pelo front-end. A autenticação é baseada em tokens (JWT), garantindo controle de acesso às rotas protegidas da aplicação.
-                            
-                            A camada de persistência utiliza Sequelize como ORM para interação com o banco de dados relacional, facilitando a modelagem de entidades como usuários, transações financeiras, categorias e metas. Essa estrutura permite registrar receitas e despesas, agrupar informações por períodos (como anos e meses) e gerar dados consolidados para exibição nos dashboards.
+                                    O back-end foi implementado em Node.js com Express, responsável pelo gerenciamento das regras de negócio, autenticação de usuários e exposição de endpoints REST.
 
-                            O sistema também inclui funcionalidades como cadastro e login de usuários, proteção de rotas para impedir acesso não autenticado, gerenciamento de transações financeiras e visualização analítica de dados por meio de gráficos e indicadores. O projeto foi estruturado seguindo princípios de separação de responsabilidades, organização modular do código e comunicação entre cliente e servidor via API REST."
-                            image={ControleFinanceiro}
-                            video="https://www.youtube.com/embed/G_tq12WisX8"
-                            openCard={openCard}
-                            toggleCard={toggleCard}
-                        />
-                    </Grid>
-
+                                    A camada de persistência utiliza Sequelize como ORM para interação com banco de dados relacional, permitindo registrar receitas, despesas e metas financeiras."
+                        image={ControleFinanceiro}
+                        projectLink="https://saa-s-controle-financeiro-lac.vercel.app/"
+                        githubLink="https://github.com/ClaudioFilipe00/SaaS-Controle-Financeiro"
+                        video="https://www.youtube.com/embed/fAxgHqU_kCw"
+                        openCard={openCard}
+                        toggleCard={toggleCard}
+                    />
 
                 </Grid>
             </Container>

@@ -5,6 +5,7 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import YoutubeIcon from '@mui/icons-material/YouTube';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { useState } from "react";
 
@@ -107,7 +108,7 @@ const Hero = () => {
                                     opacity: 0,
                                 }}
                             >
-                                Software & Web Developer
+                                FullStack Developer
                             </Typography>
                             <Grid
                                 container
@@ -117,7 +118,7 @@ const Hero = () => {
                                 pt={3}
                                 className="initial-load-animation"
                                 sx={{
-                                    animationDelay: "0.6s", 
+                                    animationDelay: "0.6s",
                                     opacity: 0,
                                 }}
                             >
@@ -125,7 +126,7 @@ const Hero = () => {
                                     <StyledButton
                                         component="a"
                                         href={CV}
-                                        download = "Curriculo Claudio Filipe.pdf"
+                                        download="Curriculo Claudio Filipe.pdf"
                                     >
                                         <CloudDownloadIcon />
                                         <Typography>Download CV</Typography>
@@ -172,6 +173,18 @@ const Hero = () => {
                                                 sx={{ color: "primary.contrastText" }}
                                             >
                                                 <EmailIcon fontSize="large" />
+                                            </IconButton>
+                                        </Tooltip>
+                                    </Grid>
+                                    <Grid>
+                                        <Tooltip title="Youtube">
+                                            <IconButton
+                                                component="a"
+                                                href="https://youtube.com/@devsemfiltro-r7e?si=IsSmPZks8lB5tSnq"
+                                                target="_blank"
+                                                sx={{ color: "primary.contrastText" }}
+                                            >
+                                                <YoutubeIcon fontSize="large" />
                                             </IconButton>
                                         </Tooltip>
                                     </Grid>
