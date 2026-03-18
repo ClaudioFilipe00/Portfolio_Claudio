@@ -48,7 +48,7 @@ const Projetos = () => {
                             O sistema utiliza PostgreSQL como banco de dados relacional, com Sequelize como ORM para o mapeamento entre objetos da aplicação e tabelas do banco de dados."
                             image={Mediquese}
                             githubLink="https://github.com/ClaudioFilipe00/Medique-SE"
-                            video=""
+                            video="https://www.youtube.com/embed/SzGVCaGK2Jo"
                             openCard={openCard}
                             toggleCard={toggleCard}
                         />
