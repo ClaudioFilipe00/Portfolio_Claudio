@@ -73,7 +73,7 @@ const Projetos = () => {
                             image={MovieBuddy}
                             projectLink="https://drive.usercontent.google.com/download?id=1_TFIG1Db5S1h4RInpe0icsw9-Ul1-GRr&export=download&authuser=0"
                             githubLink="https://github.com/ClaudioFilipe00/Chatbot-MovieBuddy"
-                            video=""
+                            video="https://www.youtube.com/embed/2907O_EBzpA"
                             openCard={openCard}
                             toggleCard={toggleCard}
                         />
